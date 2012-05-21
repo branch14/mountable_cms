@@ -6,16 +6,13 @@
     %th=t('.path')
     %th=t('.handler')
     %th=t('.content_size')
-    %th=t('.actions')
   -@pages.each do |page|
     %tr
       %td=page.id
-      %td=page.path
+      %td=link_to page.path, [:edit, page]
       %td=page.handler
       %td=number_to_human_size(page.content.try(:length))
-      %td
-        =link_to t('.edit'), [:edit, page]
-        -#=link_to t('.destroy'), @page, :method => :destroy
+      -#=link_to t('.destroy'), @page, :method => :destroy
 
 =link_to t('.new'), new_page_path
 

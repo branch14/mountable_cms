@@ -4,7 +4,7 @@
 
 *= require formtastic
 *= require codemirror
-*= require codemirror/themes/ambiance
+*= require codemirror/themes/neat
 */
 
 
@@ -31,4 +31,9 @@ body#mountable_cms {
             background-color: GhostWhite;
         }
     }
+    .CodeMirror-scroll {
+        border: 1px solid CornflowerBlue;
+        background-color: GhostWhite;
+    }
 }
+
