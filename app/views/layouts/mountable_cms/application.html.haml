@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title MountableCms
+    =stylesheet_link_tag    "mountable_cms/application"
+    =javascript_include_tag "mountable_cms/application"
+    =csrf_meta_tags
+  %body#mountable_cms
+    %h1 MountableCms
+    .wrapper=yield

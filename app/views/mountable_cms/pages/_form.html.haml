@@ -1,0 +1,14 @@
+=semantic_form_for @page do |f|
+  =f.inputs do
+    =f.input :path, :as => :select, :collection => views, :include_blank => false
+    =f.input :handler, :as => :select, :collection => handlers, :include_blank => false
+    =f.input :content
+  =f.actions do
+    =f.action :submit, :as => :button
+    =f.action :cancel, :as => :link
+
+:javascript
+  var editor = CodeMirror.fromTextArea($("#page_content")[0], {
+    theme: 'ambiance',
+    lineNumbers: true
+  });
